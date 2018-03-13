@@ -17,7 +17,7 @@ logger.setLevel(INFO)
 BASE_URL = "https://www.instagram.com/"
 USER_FILE = "users"
 DICT_FILE = "eng_dict"
-THREAD_NUM = 5
+THREAD_NUM = 15
 
 # val
 words = []
