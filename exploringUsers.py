@@ -17,7 +17,7 @@ logger.setLevel(INFO)
 BASE_URL = "https://www.instagram.com/"
 USER_FILE = "users"
 DICT_FILE = "eng_dict"
-THREAD_NUM = 10
+THREAD_NUM = 30
 
 # val
 words = []
@@ -41,7 +41,10 @@ def checkUserExistence(threadNum, divWords):
     miniUsers = []
     
     for i, word in enumerate(divWords):
-        result = requests.get(generateUrl(word))
+        try:
+            result = requests.get(generateUrl(word))
+        except:
+            logger.info("\033[31mAn Error occured!\033[0m"+ generateUrl(word))
         if result.status_code == requests.codes.ok:
             miniUsers.append(word)
         # conversion of 100%
