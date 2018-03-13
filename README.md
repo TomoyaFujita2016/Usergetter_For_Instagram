@@ -4,6 +4,7 @@
 1. python3
 2. requests
 3. tqdm
+4. more-itertools
 
 ## Usage
 1. `git clone https://github.com/TomoyaFujita2016/CrawlerForInstagram.git`
