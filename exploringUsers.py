@@ -16,7 +16,7 @@ logger.setLevel(INFO)
 # const
 BASE_URL = "https://www.instagram.com/"
 USER_FILE = "users"
-DICT_FILE = "eng_dict"
+DICT_FILE = "ENG_dict"
 THREAD_NUM = 15
 
 # val
@@ -39,7 +39,6 @@ def generateUrl(word):
 
 def checkUserExistence(threadNum, divWords):
     miniUsers = []
-    
     for i, word in enumerate(divWords):
         try:
             result = requests.get(generateUrl(word))
@@ -49,7 +48,7 @@ def checkUserExistence(threadNum, divWords):
         if result.status_code == requests.codes.ok:
             miniUsers.append(word)
         
-        # conversion of 100%
+        # conversion of 100% when 
         if i % (len(divWords)//100) == 0:
             logger.info(str(100*i/len(divWords)) + "% " + str(word))
             if i != 0:
