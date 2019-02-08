@@ -1,5 +1,5 @@
-# CrawlerForInstagram
-
+# Usergetter for instagram
+※単語辞書に乗ってるユーザー名を片っ端から獲得するとても脳筋なツール
 ## Requirements
 1. python3
 2. requests
